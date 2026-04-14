@@ -1,5 +1,5 @@
 # ELF_dftbplus
-A python code for DFTB+ electron localisation function (ELF), molecular orbital (MO) and charge density calculation. The tool for PLATO ELF calculation can be accessed via https://github.com/d3iven005/PLATO-tools.
+A python code for DFTB+ electron localisation function (ELF), molecular orbital (MO) and charge density calculation. The tool for PLATO ELF calculation is available via https://github.com/d3iven005/PLATO-tools.
 # USAGE
 1. Run dftb+ programme and make sure that WritEigenvectors and EigenvectorsAsText = Yes.
 2. Copy ".xyz", "band.out" and "eignvec.out" files to the "00_inputdata/" folder.
