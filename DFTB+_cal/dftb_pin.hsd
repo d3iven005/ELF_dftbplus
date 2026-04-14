@@ -1,0 +1,144 @@
+Geometry = {
+  TypeNames = {
+"H" "C" "N" "O"
+  }
+  TypesAndCoordinates = {
+ 3 2.9872788427455617 1.3279104521744094 -0.43066855279713662
+ 2 3.2242504817133586 -1.3934839439780982 -0.40175574517187912
+ 3 1.0091136779011451 -2.9613895967020305 -0.66197101379919687
+ 2 0.61057046690985006 2.5700273444673356 5.1778492087062498E-002
+ 2 -1.5350244205226593 0.86039224259998370 0.15439061326689801
+ 2 -1.3165720962429359 -1.7616025665532724 -0.12509986044392471
+ 3 -4.1358542986038316 1.3209184660166673 0.52591074262151438
+ 2 -5.3879867386362257 -0.98360237705532949 0.47847862030818333
+ 3 -3.6919576638866425 -2.8701158314536683 8.0502327113462127E-002
+ 2 1.2411720292986368 -5.7209564578238323 -0.31652910308696969
+ 4 5.3169330414656590 -2.3731178964574120 -0.31993060986641170
+ 4 0.53838293414613525 4.8649105849975793 0.30065540478290670
+ 2 -5.3093741375113428 3.7853101277224410 0.95091011745291421
+ 2 5.3481135202772103 2.8353448732638165 -0.37189807455233209
+ 1 -7.4211429297482896 -1.2825570284485153 0.71091491690339093
+ 1 2.8011408328705381 -6.4337611007158015 -1.4862694900173230
+ 1 -0.51173779770717243 -6.6525913701932415 -0.91991861124021990
+ 1 1.6189282544155637 -6.2342060363218676 1.6606911987631578
+ 1 -4.5585860022489371 5.1925890714171645 -0.38115773189636881
+ 1 -4.9212244194572321 4.4637217576222747 2.8763519272159792
+ 1 -7.3648290952886377 3.6554859523070689 0.69825375277991208
+ 1 6.7952656823309496 1.9526538639986015 -1.5711181869045168
+ 1 6.0941773405681694 2.9840663085649775 1.5599688035719013
+ 1 4.9947347604129524 4.7488814092988338 -1.0947182651837704
+  }
+  Periodic = No
+  Helical = No
+}
+Driver = GeometryOptimisation {
+  MovedAtoms = 1:-1
+  MaxSteps = 1
+  OutputPrefix = "Caffeine"
+  Optimiser = Rational {
+    DiagLimit = 1.0000000000000000E-002
+  }
+  LatticeOpt = No
+  Convergence = {
+    Energy = 1.7976931348623157E+308
+    GradNorm = 1.7976931348623157E+308
+    GradElem = 1.0000000000000000E-004
+    DispNorm = 1.7976931348623157E+308
+    DispElem = 1.7976931348623157E+308
+  }
+  AppendGeometries = No
+}
+Hamiltonian = DFTB {
+  SCC = Yes
+  SccTolerance = 1.0e-5
+  MaxSCCIterations = 1000
+  Dispersion = DftD3 {
+    Damping = BeckeJohnson {
+      a1 = 0.5719
+      a2 = 3.6017
+    }
+    s6 = 1.0
+    s8 = 0.5883
+    cutoff = 94.868329805051374
+    cutoffcn = 40.000000000000000
+    threebody = No
+    hhrepulsion = No
+  }
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = "./mio-1-1/"
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No
+  }
+  MaxAngularMomentum = {
+    O = "p"
+    C = "p"
+    H = "s"
+    N = "p"
+  }
+  PolynomialRepulsive = {}
+  ShellResolvedSCC = No
+  OldSKInterpolation = No
+  ReadInitialCharges = No
+  InitialCharges = {}
+  ConvergentSCCOnly = Yes
+  HCorrection = None {}
+  SpinPolarisation = {}
+  ElectricField = {}
+  Solver = RelativelyRobust {}
+  Charge = 0.0000000000000000
+  OnSiteCorrection = {}
+  Solvation = {}
+  Electrostatics = GammaFunctional {}
+  ThirdOrder = No
+  ThirdOrderFull = No
+  Differentiation = FiniteDiff {
+    Delta = 1.2207031250000000E-004
+  }
+  ForceEvaluation = "Traditional"
+  Mixer = Broyden {
+    MixingParameter = 0.20000000000000001
+    InverseJacobiWeight = 1.0000000000000000E-002
+    MinimalWeight = 1.0000000000000000
+    MaximalWeight = 100000.00000000000
+    WeightFactor = 1.0000000000000000E-002
+  }
+  Filling = Fermi {
+    Temperature = 0.0000000000000000
+  }
+}
+Options = {
+  WriteDetailedOut = Yes
+  WriteAutotestTag = No
+  WriteDetailedXML = No
+  WriteResultsTag = No
+  RandomSeed = 0
+  WriteHS = No
+  WriteRealHS = No
+  MinimiseMemoryUsage = No
+  ShowFoldedCoords = No
+  TimingVerbosity = 1
+  WriteCharges = Yes
+  WriteChargesAsText = No
+  BinaryAccessTypes = {
+ "stream"
+  }
+}
+Analysis = {
+  WriteEigenvectors = Yes
+  EigenvectorsAsText = Yes
+  ProjectStates = {}
+  WriteBandOut = Yes
+  MullikenAnalysis = Yes
+  WriteNetCharges = No
+  AtomResolvedEnergies = No
+  PrintForces = No
+}
+ParserOptions = {
+  ParserVersion = 14
+  WriteHSDInput = Yes
+  StopAfterParsing = No
+  IgnoreUnprocessedNodes = No
+}
+Reks = None {}
+ExcitedState = {}
